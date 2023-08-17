@@ -6,8 +6,10 @@ const userController = require('../controller/userController');
 const authController = require('../controller/authController');
 
 
-router.post('/profile',userController.getUserProfile);
+router.post('/profile/user',userController.getUserProfile);
 
-router.post('/profile',userController.updateUserProfile);
+router.post('/profile/update',userController.updateUserProfile);
+
+router.post('/callback',authController.callbackController);
 
 module.exports = router;
