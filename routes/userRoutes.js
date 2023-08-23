@@ -12,4 +12,5 @@ router.post('/profile/update',userController.updateUserProfile);
 
 router.post('/callback',authController.callbackController);
 
+
 module.exports = router;

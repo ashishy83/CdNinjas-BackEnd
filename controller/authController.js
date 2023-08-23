@@ -106,10 +106,13 @@ exports.userLogoutController = (req, res) => {
 
 exports.callbackController = (req, res) => {
   try {
-    const name = req.body.name;
-    const email = req.body.email;
-    const phone = req.body.phone;
-    const year = req.body.year;
+    // const name = req.body.name;
+    // const email = req.body.email;
+    // const phone = req.body.phone;
+    // const year = req.body.year;
+
+    const {name, email, phone, year} = req.body;
+
     const callbackDetails = new Callback({
       name,
       email,
