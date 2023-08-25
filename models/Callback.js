@@ -20,5 +20,6 @@ const callbackSchema = new mongoose.Schema({
   },
 });
 
+
 const Callback = new mongoose.model("callback", callbackSchema);
 module.exports = Callback;

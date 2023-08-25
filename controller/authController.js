@@ -104,7 +104,7 @@ exports.userLogoutController = (req, res) => {
 
 }
 
-exports.callbackController = (req, res) => {
+exports.callbackController = async(req, res) => {
   try {
     // const name = req.body.name;
     // const email = req.body.email;
@@ -113,16 +113,14 @@ exports.callbackController = (req, res) => {
 
     const {name, email, phone, year} = req.body;
 
-    const callbackDetails = new Callback({
+    const callbackDetails = new callback({
       name,
       email,
       phone,
       year,
     });
-
-    callbackDetails
-      .save()
-      .then((re) => {
+console.log("name: ",name)
+    callbackDetails.save().then((re) => {
         res.status(200).json({
           error: false,
           message: "success",
