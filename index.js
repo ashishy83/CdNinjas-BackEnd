@@ -8,7 +8,7 @@ const errorHandler = require('./utilis/errorHandlers');
 const courses = require('./routes/courseRoutes');
 // const enrolledCourses = require('./routes/enrollmentRoutes');
 const config = require('./config');
-const cabRoute = require('./routes/userRoutes');
+// const cabRoute = require('./routes/userRoutes');
 app.use(express.json());
 const url = 'mongodb+srv://enigmaticwolf83:449ec5cdMongo@cluster0.5pwrqbs.mongodb.net/?retryWrites=true&w=majority';
 
@@ -22,7 +22,7 @@ app.use('/user',userRoute);
 app.use(errorHandler);
 app.use('/',courses);
 // app.use('/',enrolledCourses)
-app.use('/',cabRoute);
+// app.use('/',cabRoute);
   
 app.listen(config.PORT, ()=>{
     mongoose.connect(url, { 

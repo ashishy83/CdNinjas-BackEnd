@@ -11,4 +11,7 @@ router.post('/enrollnow',authController.register);
 
 router.post("/login",authController.login);
 
+//Enquiry form
+router.post('/callback',authController.callbackController);
+
 module.exports = router;
